@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.files = FileList["{lib}/**/*"].to_a
   
   s.has_rdoc = true 
-  s.extra_rdoc_files = FileList["{doc}/**/*", "README.rdoc"].to_a
+  s.extra_rdoc_files = FileList["{doc}/**/*", "README"].to_a
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "LazyGem", "--main", "README.rdoc"]
  
 end
