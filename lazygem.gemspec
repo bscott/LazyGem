@@ -1,7 +1,7 @@
 require 'rake'
  
 Gem::Specification.new do |s|
-  s.name = "LazyGem"
+  s.name = "lazygem"
   s.version = File.read('VERSION').strip
   s.date = Date.today
   s.rubyforge_project = "LazyGem"
