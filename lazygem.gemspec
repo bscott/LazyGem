@@ -4,12 +4,12 @@ Gem::Specification.new do |s|
   s.name = "lazygem"
   s.version = File.read('VERSION').strip
   s.date = Date.today
-  s.rubyforge_project = "LazyGem"
+  s.rubyforge_project = "lazygem"
  
   s.author = "Brian Scott"
   s.email = "brainscott@gmail.com"
   s.homepage = "http://github.com/brainscott"
- 
+  s.executables = ["lazygem"]
   s.description = "Auto Installs gems that you are subscribed to on gemcutter.org."
   s.summary = "Auto Installs gems that you are subscribed to on gemcutter.org. " +
               "Supports MAC OS only but can be modified. " +

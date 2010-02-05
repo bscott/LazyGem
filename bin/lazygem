@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-
+ 
 # LazyGem 0.0.1
 # Author: Brian Scott
 #
@@ -23,18 +23,18 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
+ 
  
 $:.unshift File.dirname(__FILE__)
-
+ 
 require 'rubygems'
 require 'simple-rss'
 require 'open-uri'
-
+ 
 # Local Variables
 rUrl = "http://gemcutter.org/dashboard.atom?api_key="
 titles = Array.new
-
+ 
 # Grabing API key from local credentials file
 def read_file ()
   data = ""
@@ -44,11 +44,11 @@ temp.each_line do |line|
 end
 return data
 end
-
+ 
 # Cleaning up file
 api_key = read_file 
 api_key = api_key.split(/\:\w+\: (.+)/)[1]
-
+ 
 puts "Retrieving ATOM feed from Gemcutter.org"
 atom = SimpleRSS.parse open(rUrl + api_key)
 # parsing ATOM feed for gem titles
@@ -57,21 +57,12 @@ atom.entries.each do |entry|
   title = title.gsub(/ \(.*/, "")
   titles.push(title)
 end
-
+ 
 # Cleaning up ATOM duplicate entries
 titlesAry = titles.uniq!
-
+ 
 # Installing subscribed gems
 titlesAry.each do |title|
   puts "Installing #{title}"
 system("sudo gem install #{title}")
 end
-
-
-
-
-
-
-
-
-
