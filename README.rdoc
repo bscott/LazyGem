@@ -17,6 +17,7 @@ TODO:
 
 1) Add platform detection.
 2) Check to see if a gem is already installed.
+3) Need to add tests.
 
 LICENSE
 
