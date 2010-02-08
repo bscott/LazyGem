@@ -15,9 +15,8 @@ RubyGems (Developed on 1.3.5)
 
 TODO:
 
-1) Add platform detection.
-2) Check to see if a gem is already installed.
-3) Need to add tests.
+1) Check to see if a gem from the subscribed feed is already installed.
+2) Need to add tests.
 
 LICENSE
 

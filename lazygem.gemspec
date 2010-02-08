@@ -12,7 +12,6 @@ Gem::Specification.new do |s|
   s.executables = ["lazygem"]
   s.description = "Auto Installs gems that you are subscribed to on gemcutter.org."
   s.summary = "Auto Installs gems that you are subscribed to on gemcutter.org. " +
-              "Supports MAC OS only but can be modified. " +
               "Great, if you are moving to a new system and don't want to install each of your favorite gems"
  
   s.platform = Gem::Platform::RUBY
@@ -21,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency("simple-rss")
   
 
-  s.files = FileList["{lib}/**/*"].to_a
+  s.files = FileList["{bin}/**/*"].to_a
   
   s.has_rdoc = true 
   s.extra_rdoc_files = FileList["{doc}/**/*", "README.rdoc"].to_a

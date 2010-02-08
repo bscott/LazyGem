@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
  
-# LazyGem 0.0.1
+# LazyGem 0.0.2
 # Author: Brian Scott
 #
 # Copyright (c) 2010 Brian Scott <brainscott@gmail.com>
@@ -63,6 +63,15 @@ titlesAry = titles.uniq!
  
 # Installing subscribed gems
 titlesAry.each do |title|
+  
   puts "Installing #{title}"
-system("sudo gem install #{title}")
+  
+  if RUBY_PLATFORM =~ /mswin32/ 
+    
+system("gem install #{title}")
+
+else system("sudo gem install #{title}")
+  
+  end
 end
+
