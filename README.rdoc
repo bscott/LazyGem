@@ -18,6 +18,9 @@ TODO:
 1) Check to see if a gem from the subscribed feed is already installed.
 2) Need to add tests.
 
+Currently Working on:
+- Working on gem detection for ver 0.0.4 release
+
 LICENSE
 
 (The MIT License)
