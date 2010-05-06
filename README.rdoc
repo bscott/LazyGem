@@ -1,8 +1,7 @@
 LazyGem
 
-LazyGem looks at your ATOM feed in your gemcutter profile and auto installs any gems that you are currently subscribed too.
-Very useful if you move to a new station. Lazygem requires that you have your credentials file setup according to your http://gemcutter.org/profile page. 
-This file is used to pull your api_key to retrieve your ATOM feed.
+LazyGem asks for your RubyGems login and will install gems that are listed in your subscribed list on the Dashboard view
+on your RubyGems.org account.
 
 INSTALL:
 
@@ -19,7 +18,7 @@ TODO:
 2) Need to add tests.
 
 Currently Working on:
-- Working on gem detection for ver 0.0.4 release
+
 
 LICENSE
 
