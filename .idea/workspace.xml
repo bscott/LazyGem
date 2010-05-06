@@ -30,7 +30,7 @@
       <file leaf-file-name="lazygem" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/lazygem">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="47" selection-start="2310" selection-end="2310" vertical-scroll-proportion="0.0">
+            <state line="33" column="9" selection-start="1404" selection-end="1413" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -39,7 +39,7 @@
       <file leaf-file-name="lazygem.gemspec" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lazygem.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="42" selection-start="798" selection-end="798" vertical-scroll-proportion="0.4878049">
+            <state line="19" column="29" selection-start="785" selection-end="785" vertical-scroll-proportion="0.4878049">
               <folding />
             </state>
           </provider>
@@ -269,14 +269,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/lazygem">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="47" selection-start="2310" selection-end="2310" vertical-scroll-proportion="0.0">
+        <state line="33" column="9" selection-start="1404" selection-end="1413" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lazygem.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="42" selection-start="798" selection-end="798" vertical-scroll-proportion="0.4878049">
+        <state line="19" column="29" selection-start="785" selection-end="785" vertical-scroll-proportion="0.4878049">
           <folding />
         </state>
       </provider>
