@@ -1,4 +1,4 @@
-0.0.4
+0.0.5
 * Completely rewrote how LazyGem retrieves list of subscribed gems on RubyGems.org
 * Now asks for your GemCutter.org login instead of looking at your API key.
 ===
