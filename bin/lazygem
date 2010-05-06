@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/local/bin/ruby
  
 # LazyGem 0.0.4
 # Author: Brian Scott
@@ -23,60 +23,59 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+# LazyGem installs gems that you are subscribed to on RubyGems.org. Pulls "My Subscriptions" from the dashboard page.
  
- 
-$:.unshift File.dirname(__FILE__)
+# $:.unshift File.dirname(__FILE__)
  
 require 'rubygems'
-require 'simple-rss'
 require 'open-uri'
- 
-# Local Variables
-rUrl = "http://gemcutter.org/dashboard.atom?api_key="
-titles = Array.new
-curGems = Array.new
-curGems = system(gem list)
-forceInstall = 0
+require 'nokogiri'
+require 'mechanize'
 
-# Grabing API key from local credentials file
-def read_file ()
-  data = ""
-  temp = File.open("#{ENV['HOME']}/.gem/credentials", 'r')
-temp.each_line do |line|
-  data += line
-end
-return data
-end
- 
-# Cleaning up file
-api_key = read_file 
-api_key = api_key.split(/\:\w+\: (.+)/)[1]
- 
-puts "Retrieving ATOM feed from Gemcutter.org"
-atom = SimpleRSS.parse open(rUrl + api_key)
-# parsing ATOM feed for gem titles
-atom.entries.each do |entry|
-  title = entry.title
-  title = title.gsub(/ \(.*/, "")
-  titles.push(title)
+# Varibles
+gemarray = Array.new
+gems = Array.new
+subscriptions_re = /^\/[^\/]+\/(.+)$/
+
+# Start of Application
+puts "Please provide your RubyGems.org login."
+puts "What is your username?"
+username = gets.chomp
+puts "What is your password?"
+password = gets.chomp
+
+# Logging into RubyGems.org and Parse the Dashboard for subscriptions
+agent = Mechanize.new
+agent.get("http://rubygems.org/session/new")
+form = agent.page.forms[1]
+form['session[email]'] = username
+form['session[password]'] = password
+form.submit
+agent.page.link_with(:text => "dashboard").click
+agent.page.links.each do |link|
+gemArray.push(link.href) if link.href.match(subscriptions_re)
 end
 
-#
- 
-# Cleaning up ATOM duplicate entries
-titlesAry = titles.uniq!
- 
+# Cleaning up gem list that was pulled from rubygems.org
+gemarray.uniq
+gemarray.each do |gem|
+  t = gem.match(subscriptions_re).captures
+  gems.push(t)
+end
+
 # Installing subscribed gems
-titlesAry.each do |title|
-  
-  puts "Installing #{title}"
-  
-  if RUBY_PLATFORM =~ /mingw/ 
-    
+
+gems.each do |title|
+
+puts "Installing #{title}"
+
+if RUBY_PLATFORM =~ /mingw/
+
 system("gem install #{title}")
 
 else system("sudo gem install #{title}")
-  
-  end
+
+end
 end
 
