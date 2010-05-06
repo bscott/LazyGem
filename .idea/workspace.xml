@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7515d958-40bb-4895-9844-ee15ace9766c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VERSION" afterPath="$PROJECT_DIR$/VERSION" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lazygem.gemspec" afterPath="$PROJECT_DIR$/lazygem.gemspec" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LazyGem.iws" />
@@ -36,16 +36,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lazygem.gemspec" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="lazygem.gemspec" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lazygem.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="19" column="42" selection-start="798" selection-end="798" vertical-scroll-proportion="0.4878049">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VERSION" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="VERSION" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VERSION">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
@@ -76,6 +76,7 @@
         <option value="$PROJECT_DIR$/bin/lazygem" />
         <option value="$PROJECT_DIR$/ChangeLog" />
         <option value="$PROJECT_DIR$/VERSION" />
+        <option value="$PROJECT_DIR$/lazygem.gemspec" />
       </list>
     </option>
   </component>
@@ -259,6 +260,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/VERSION">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/lazygem">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="47" selection-start="2310" selection-end="2310" vertical-scroll-proportion="0.0">
@@ -268,14 +276,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lazygem.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VERSION">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
+        <state line="19" column="42" selection-start="798" selection-end="798" vertical-scroll-proportion="0.4878049">
           <folding />
         </state>
       </provider>

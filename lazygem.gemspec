@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.rubygems_version = "1.3.5"
-  s.add_dependency("simple-rss")
+  s.add_dependency("nokogiri", "mechanize")
   
 
   s.files = FileList["{bin}/**/*"].to_a
