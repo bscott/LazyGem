@@ -54,7 +54,7 @@ form['session[password]'] = password
 form.submit
 agent.page.link_with(:text => "dashboard").click
 agent.page.links.each do |link|
-gemArray.push(link.href) if link.href.match(subscriptions_re)
+gemarray.push(link.href) if link.href.match(subscriptions_re)
 end
 
 # Cleaning up gem list that was pulled from rubygems.org
