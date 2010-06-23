@@ -40,8 +40,8 @@ subscriptions_re = /^\/[^\/]+\/(.+)$/
 
 # Start of Application
 puts "Please provide your RubyGems.org login."
-puts "What is your username?"
-username = gets.chomp
+puts "What is your email address?"
+email = gets.chomp
 puts "What is your password?"
 password = gets.chomp
 
@@ -49,7 +49,7 @@ password = gets.chomp
 agent = Mechanize.new
 agent.get("http://rubygems.org/session/new")
 form = agent.page.forms[1]
-form['session[email]'] = username
+form['session[email]'] = email
 form['session[password]'] = password
 form.submit
 agent.page.link_with(:text => "dashboard").click

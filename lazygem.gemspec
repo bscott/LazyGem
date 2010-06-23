@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "lazygem"
  
   s.author = "Brian Scott"
-  s.email = "brainscott@gmail.com"
+  s.email = "b@bscott.me"
   s.homepage = "http://github.com/brainscott"
   s.executables = ["lazygem"]
   s.description = "Auto Installs gems that you are subscribed to on gemcutter.org."
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.rubygems_version = "1.3.5"
-  s.add_dependency("mechanize")
+  s.add_dependency("mechanize", "nokogiri")
   
 
   s.files = FileList["{bin}/**/*"].to_a
