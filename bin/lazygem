@@ -64,6 +64,8 @@ gemarray.each do |gem|
   gems.push(t)
 end
 
+# Cleanup gems list before installation
+ gems.map! { |x| x[0] }
 # Installing subscribed gems
 
 gems.each do |title|
@@ -75,7 +77,7 @@ if RUBY_PLATFORM =~ /mingw/
 system("gem install #{title}")
 
 else system("sudo gem install #{title}")
-
+puts "Enter sudo password"
 end
 end
 
