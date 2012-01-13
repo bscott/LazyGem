@@ -14,7 +14,7 @@ RubyGems (Developed on 1.3.5)
 
 TODO:
 
-1) Check to see if a gem from the subscribed feed is already installed.
+1) Add RVM support - Install to a gemset
 2) Need to add tests.
 
 Currently Working on:
