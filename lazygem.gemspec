@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
 
   s.author = "Brian Scott"
   s.email = "b@bscott.me"
-  s.homepage = "http://github.com/brainscott"
+  s.homepage = "http://github.com/brainscott/lazygem"
   s.executables = ["lazygem"]
   s.description = "Auto Installs gems that you are subscribed to on gemcutter.org."
   s.summary = "Auto Installs gems that you are subscribed to on gemcutter.org. " +
